@@ -36,8 +36,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;display:f
 .nav-links a:hover{color:var(--text)}
 .nav-cta{background:var(--primary);color:#fff;padding:.5rem 1.25rem;border-radius:8px;font-size:.9rem;font-weight:600;transition:.2s}
 .nav-cta:hover{background:#4f46e5;transform:translateY(-1px)}
-.nav-btns{display:flex;align-items:center;gap:1rem}
-.menu-toggle{display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:.5rem;z-index:1100}
+.menu-toggle{display:none;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--text);cursor:pointer;padding:.5rem;border-radius:8px;z-index:1100;width:40px;height:40px;align-items:center;justify-content:center;transition:.2s}
+.menu-toggle:hover{background:rgba(255,255,255,0.1)}
 .mobile-menu-overlay{position:fixed;inset:0;background:rgba(5,8,17,0.9);backdrop-filter:blur(10px);z-index:999;opacity:0;pointer-events:none;transition:.3s}
 .mobile-menu-overlay.active{opacity:1;pointer-events:all}
 
@@ -215,9 +215,10 @@ footer a:hover{color:var(--accent)}
     box-shadow:-10px 0 30px rgba(0,0,0,0.5);
   }
   .nav-links.active{right:0}
-  .nav-links a{font-size:1.5rem;font-weight:700}
-  .menu-toggle{display:block}
-  .nav-cta{display:none} /* Hide in nav, maybe add to mobile menu later */
+  .nav-links a{font-size:1.5rem;font-weight:700;color:var(--text-sub);transition:.2s}
+  .nav-links a:hover{color:var(--text);transform:translateX(10px)}
+  .menu-toggle{display:flex}
+  .nav-cta{display:none} 
   
   .hero{padding:7rem 1.5rem 3rem}
   .hero h1{font-size:clamp(2rem,10vw,3rem)}
