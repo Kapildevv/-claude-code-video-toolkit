@@ -37,7 +37,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;display:f
 .nav-cta{background:var(--primary);color:#fff;padding:.5rem 1.25rem;border-radius:8px;font-size:.9rem;font-weight:600;transition:.2s}
 .nav-cta:hover{background:#4f46e5;transform:translateY(-1px)}
 .logo-container{z-index:1100}
-.menu-toggle{display:none;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--text);cursor:pointer;padding:.5rem;border-radius:8px;z-index:1100;width:40px;height:40px;align-items:center;justify-content:center;transition:.2s}
+.menu-toggle{display:none;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--text);cursor:pointer;padding:0;border-radius:8px;z-index:1100;width:42px;height:42px;flex-direction:column;align-items:center;justify-content:center;gap:5px;transition:.2s}
+.hamburger-line{width:22px;height:2px;background:currentColor;border-radius:2px;transition:.3s}
+.menu-toggle.active .hamburger-line:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle.active .hamburger-line:nth-child(2){opacity:0}
+.menu-toggle.active .hamburger-line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .menu-toggle:hover{background:rgba(255,255,255,0.1)}
 .mobile-menu-overlay{position:fixed;inset:0;background:rgba(5,8,17,0.9);backdrop-filter:blur(10px);z-index:999;opacity:0;pointer-events:none;transition:.3s}
 .mobile-menu-overlay.active{opacity:1;pointer-events:all}
