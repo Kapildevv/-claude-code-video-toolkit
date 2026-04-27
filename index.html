@@ -27,7 +27,12 @@
 
 <!-- NAVIGATION -->
 <nav>
-  <div class="nav-logo">⚡ Claude Video Toolkit</div>
+  <div class="logo-container">
+    <a href="#" class="logo">
+      <span class="logo-icon">⚡</span>
+      Claude Video Toolkit
+    </a>
+  </div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#features">Features</a></li>
@@ -240,139 +245,105 @@
       <div class="prompt reveal"><span class="prompt-icon">🎬</span><p>"Use the video toolkit to create an editing plan for my YouTube video."</p></div>
       <div class="prompt reveal"><span class="prompt-icon">📁</span><p>"Help me organize my raw footage, audio, music, thumbnails, and exports."</p></div>
       <div class="prompt reveal"><span class="prompt-icon">⚙️</span><p>"Generate FFmpeg commands to trim, merge, resize, and compress these clips."</p></div>
-      <div class="prompt reveal"><span class="prompt-icon">📋</span><p>"Create a shot list and editing timeline from this script."</p></div>
-      <div class="prompt reveal"><span class="prompt-icon">🔍</span><p>"Review my video project folder and suggest a clean workflow."</p></div>
-      <div class="prompt reveal"><span class="prompt-icon">✅</span><p>"Create an export checklist for YouTube Shorts, Instagram Reels, and long-form YouTube."</p></div>
+      <div class="prompt reveal"><span class="prompt-icon">📋</span><p>"Can you help me write a shot list for a technical review video?"</p></div>
+    </div>
+
+    <div class="usage-demo reveal">
+      <div class="terminal-mockup">
+        <div class="terminal-header">
+          <div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+          <span>Claude Code Terminal</span>
+        </div>
+        <div class="terminal-body">
+          <div class="term-line"><span class="user-prompt">User:</span> Help me organize my video project assets.</div>
+          <div class="term-line"><span class="claude-reply">Claude:</span> I can help you with that using the Video Toolkit. Here's a recommended folder structure:</div>
+          <div class="term-line success">
+            📂 project-root/<br/>
+            ├── 📂 01_footage/ (Raw clips)<br/>
+            ├── 📂 02_audio/ (Music & SFX)<br/>
+            ├── 📂 03_graphics/ (Assets & Overlays)<br/>
+            ├── 📂 04_exports/ (Final renders)<br/>
+            └── 📂 05_docs/ (Scripts & Plans)
+          </div>
+          <div class="term-line cursor">_</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOLDER STRUCTURE -->
-<section id="structure">
+<section id="folders">
   <div class="container">
-    <div class="text-center reveal" style="margin-bottom:2rem">
-      <div class="section-label">Project Structure</div>
-      <h2 class="section-title">Recommended Folder Layout</h2>
-      <p class="section-sub mx-auto">Organize your video project like a professional to get the best results from Claude.</p>
+    <div class="text-center reveal">
+      <div class="section-label">Toolkit Contents</div>
+      <h2 class="section-title">Inside the Folder</h2>
+      <p class="section-sub mx-auto">What you'll find when you download the toolkit.</p>
     </div>
-    <div class="folder-visual reveal">
-      <div class="folder">📁 video-project/</div>
-      <div class="file">📂 raw-footage/   <span class="comment"># Original, unedited video clips</span></div>
-      <div class="file">📂 audio/         <span class="comment"># Voiceovers and recorded audio</span></div>
-      <div class="file">📂 music/         <span class="comment"># Background tracks and sound effects</span></div>
-      <div class="file">📂 graphics/      <span class="comment"># Overlays, logos, lower thirds</span></div>
-      <div class="file">📂 thumbnails/    <span class="comment"># Cover art and thumbnail designs</span></div>
-      <div class="file">📂 scripts/       <span class="comment"># Production scripts and teleprompter files</span></div>
-      <div class="file">📂 notes/         <span class="comment"># Creative briefs and editing plans</span></div>
-      <div class="file">📂 exports/       <span class="comment"># Final rendered video files</span></div>
+    <div class="folder-grid">
+      <div class="folder-item reveal">
+        <div class="folder-header"><span class="f-icon">📜</span> <code>skill-video-editing.md</code></div>
+        <p>The main instruction file that defines how Claude should assist with video editing.</p>
+      </div>
+      <div class="folder-item reveal">
+        <div class="folder-header"><span class="f-icon">📂</span> <code>tools/</code></div>
+        <p>Contains helper scripts and specialized tool definitions for the toolkit.</p>
+      </div>
+      <div class="folder-item reveal">
+        <div class="folder-header"><span class="f-icon">📂</span> <code>templates/</code></div>
+        <p>Ready-to-use templates for editing plans, shot lists, and scripts.</p>
+      </div>
+      <div class="folder-item reveal">
+        <div class="folder-header"><span class="f-icon">📄</span> <code>README.md</code></div>
+        <p>Project documentation and detailed usage instructions.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- WORKFLOW TIMELINE -->
-<section id="workflow">
+<!-- FAQ & TROUBLESHOOTING -->
+<section id="troubleshooting" style="padding-bottom:10rem">
   <div class="container">
-    <div class="text-center reveal" style="margin-bottom:1rem">
-      <div class="section-label">Workflow</div>
-      <h2 class="section-title">From Footage to Final Cut</h2>
-    </div>
-    <div class="timeline">
-      <div class="tl-item reveal"><div class="tl-dot"></div><h4>1. Add Your Assets</h4><p>Place raw footage, audio, music, and graphics into the recommended folder structure.</p></div>
-      <div class="tl-item reveal"><div class="tl-dot"></div><h4>2. Ask Claude to Inspect</h4><p>Ask Claude Code to review your project folder and understand what assets are available.</p></div>
-      <div class="tl-item reveal"><div class="tl-dot"></div><h4>3. Generate an Editing Plan</h4><p>Claude creates a step-by-step editing workflow, shot list, and timeline based on your content.</p></div>
-      <div class="tl-item reveal"><div class="tl-dot"></div><h4>4. Get FFmpeg Commands</h4><p>Request specific video processing commands — trim, merge, resize, compress, or format convert.</p></div>
-      <div class="tl-item reveal"><div class="tl-dot"></div><h4>5. Export and Publish</h4><p>Use the platform-specific export checklist to finalize and publish your video confidently.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- REQUIREMENTS -->
-<section id="requirements">
-  <div class="container">
-    <div class="text-center reveal" style="margin-bottom:2rem">
-      <div class="section-label">Requirements</div>
-      <h2 class="section-title">What You Need</h2>
-    </div>
-    <div class="req-grid reveal">
-      <div class="req-card"><div class="req-icon">🤖</div><p>Claude Code (by Anthropic)</p></div>
-      <div class="req-card"><div class="req-icon">📦</div><p>This toolkit skill folder installed</p></div>
-      <div class="req-card"><div class="req-icon">🎞️</div><p>FFmpeg (optional, to run generated commands)</p></div>
-      <div class="req-card"><div class="req-icon">📂</div><p>A video project folder with assets</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- TROUBLESHOOTING -->
-<section id="troubleshooting">
-  <div class="container">
-    <div class="text-center reveal" style="margin-bottom:2rem">
-      <div class="section-label">Troubleshooting</div>
-      <h2 class="section-title">Common Questions</h2>
-    </div>
-    <div class="accordion reveal">
-      <div class="acc-item">
-        <button class="acc-trigger" onclick="toggleAcc(this)">
-          Skill not detected by Claude Code <span class="acc-arrow">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Restart Claude Code completely after placing the folder in the skills directory. Ensure the path is correct for your OS and Claude Code version.</p>
+    <div class="faq-grid">
+      <div class="faq-section reveal">
+        <h2 class="section-title" style="text-align:left">Troubleshooting</h2>
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">Skill not loading? <span>+</span></div>
+          <div class="acc-content"><p>Make sure the folder is placed in the correct Claude Code skills directory and that the filename starts with <code>skill-</code>. Restart Claude Code after moving the folder.</p></div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">Commands not working? <span>+</span></div>
+          <div class="acc-content"><p>Ensure you are using natural language prompts. If a specific tool fails, check that you have the necessary permissions in your terminal environment.</p></div>
         </div>
       </div>
-      <div class="acc-item">
-        <button class="acc-trigger" onclick="toggleAcc(this)">
-          FFmpeg command not working <span class="acc-arrow">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Confirm FFmpeg is installed on your system. Type <code>ffmpeg -version</code> in your terminal to verify. Download it from ffmpeg.org if missing.</p>
+      <div class="faq-section reveal">
+        <h2 class="section-title" style="text-align:left">FAQ</h2>
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">Does it edit videos? <span>+</span></div>
+          <div class="acc-content"><p>No, it's an assistant. It helps you plan, organize, and generates commands/scripts for you to use in your editing software or terminal (like FFmpeg).</p></div>
         </div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-trigger" onclick="toggleAcc(this)">
-          Files or folders not found <span class="acc-arrow">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Double-check your file paths and folder names. Use the recommended project structure. Verify that Claude knows the correct root directory of your project.</p>
-        </div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-trigger" onclick="toggleAcc(this)">
-          Large video files causing issues <span class="acc-arrow">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Do not commit raw video files to GitHub. GitHub limits individual files to 100MB. Use Google Drive, Dropbox, or YouTube Unlisted for large video storage.</p>
-        </div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-trigger" onclick="toggleAcc(this)">
-          GitHub Pages website not updating <span class="acc-arrow">+</span>
-        </button>
-        <div class="acc-body">
-          <p>GitHub Pages can take 1–5 minutes to deploy. Clear your browser cache with Ctrl+Shift+R (Cmd+Shift+R on Mac) and reload the page.</p>
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">Is it free? <span>+</span></div>
+          <div class="acc-content"><p>Yes, this toolkit is 100% open-source and free to use with your Claude Code setup.</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SOCIAL SHARE -->
-<section id="share">
-  <div class="container">
-    <div class="social-section reveal">
-      <h2>Built for Creators, Developers &amp; Editors</h2>
-      <p>Speed up repetitive video planning and editing tasks with the power of Claude Code. Star the repo, share with your network, or start using it today.</p>
-      <div class="share-btns">
-        <a href="https://github.com/Kapildevv/-claude-code-video-toolkit" target="_blank" rel="noopener" class="btn-primary">★ Star on GitHub</a>
-        <a href="https://github.com/Kapildevv/-claude-code-video-toolkit" target="_blank" rel="noopener" class="btn-secondary">View Repository</a>
-        <button class="btn-secondary" onclick="copyInstall(event)">📋 Copy Install Command</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <p>Made for Claude Code video editing workflows.</p>
-  <p style="margin-top:.5rem">GitHub: <a href="https://github.com/Kapildevv/-claude-code-video-toolkit" target="_blank" rel="noopener">github.com/Kapildevv/-claude-code-video-toolkit</a></p>
+  <div class="container text-center">
+    <div class="footer-logo">⚡ Claude Video Toolkit</div>
+    <p style="color:var(--text-sub);margin-bottom:1.5rem">Empowering creators with AI-assisted video production.</p>
+    <div class="footer-links">
+      <a href="https://github.com/Kapildevv/-claude-code-video-toolkit" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://twitter.com/kapildevv" target="_blank" rel="noopener">Twitter</a>
+      <a href="#">Documentation</a>
+    </div>
+    <div style="margin-top:3rem;font-size:0.85rem;color:rgba(255,255,255,0.2)">
+      &copy; 2026 Claude Code Video Toolkit. Built for the future of editing.
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>
