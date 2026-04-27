@@ -147,6 +147,30 @@ function copyInstall(e) {
   });
 }
 
+/* ─── MOBILE MENU ─── */
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const overlay = document.querySelector('.mobile-menu-overlay');
+const body = document.body;
+
+function toggleMenu() {
+  navLinks.classList.toggle('active');
+  overlay.classList.toggle('active');
+  body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+}
+
+menuToggle?.addEventListener('click', toggleMenu);
+overlay?.addEventListener('click', toggleMenu);
+
+// Close menu when a link is clicked
+navLinks?.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    body.style.overflow = '';
+  });
+});
+
 /* ─── ACCORDION ─── */
 function toggleAcc(trigger) {
   const body = trigger.nextElementSibling;
