@@ -112,29 +112,38 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(e.target);
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-revealEls.forEach(el => observer.observe(el));
+}, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+
+// Add a small delay to ensure elements are revealed even if they start in viewport
+setTimeout(() => {
+  revealEls.forEach(el => {
+    observer.observe(el);
+    // Fallback: if it's already in view or observer fails, show it after 1s
+    setTimeout(() => el.classList.add('visible'), 1000);
+  });
+}, 100);
 
 /* ─── COPY TO CLIPBOARD ─── */
 function copyCode(btn) {
   const pre = btn.closest('.code-block').querySelector('pre');
   navigator.clipboard.writeText(pre.innerText.trim()).then(() => {
+    const orig = btn.textContent;
     btn.textContent = 'Copied!';
     btn.classList.add('copied');
     setTimeout(() => {
-      btn.textContent = 'Copy';
+      btn.textContent = orig;
       btn.classList.remove('copied');
     }, 2000);
   });
 }
 
-function copyInstall() {
+function copyInstall(e) {
+  const target = e ? e.target : event.target;
   const cmd = 'git clone https://github.com/Kapildevv/-claude-code-video-toolkit.git';
   navigator.clipboard.writeText(cmd).then(() => {
-    const btn = event.target;
-    const orig = btn.textContent;
-    btn.textContent = '✓ Copied!';
-    setTimeout(() => btn.textContent = orig, 2000);
+    const orig = target.textContent;
+    target.textContent = '✓ Copied!';
+    setTimeout(() => target.textContent = orig, 2000);
   });
 }
 
