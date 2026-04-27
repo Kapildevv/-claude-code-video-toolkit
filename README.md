@@ -1,5 +1,9 @@
 # claude-code-video-toolkit
 
+> [!TIP]
+> **View the Documentation Website:** [https://Kapildevv.github.io/-claude-code-video-toolkit/](https://Kapildevv.github.io/-claude-code-video-toolkit/)
+
+
 <p align="center">
   <img src="assets/banner/toolkit-banner.gif" alt="claude-code-video-toolkit — NARRATE ▸ SCORE ▸ GENERATE ▸ COMPOSE ▸ RENDER" width="960" />
 </p>

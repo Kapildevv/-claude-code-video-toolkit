@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code Video Toolkit | Developer Documentation</title>
+    <meta name="description" content="A comprehensive video editing toolkit for Claude Code to automate editing plans, FFmpeg commands, and production workflows.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo-area">
+            <h1>Claude Video Toolkit</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#intro" class="active">What is this?</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#manual">Manual Setup</a></li>
+            <li><a href="#usage">How to Use</a></li>
+            <li><a href="#structure">Folder Structure</a></li>
+            <li><a href="#workflow">Workflow</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="intro">
+            <h1>Claude Code Video Toolkit</h1>
+            <p class="subtitle" style="font-size: 1.5rem; margin-top: 0.5rem; color: var(--primary);">Automate and simplify your video editing workflows with Claude Code.</p>
+            
+            <h2 style="margin-top: 3rem;">What is this?</h2>
+            <p>The <strong>Claude Code Video Toolkit</strong> is a professional-grade skill designed to be installed as a Claude Code toolset. It empowers Claude to assist with high-level video production tasks, including organizing massive asset libraries, generating frame-accurate editing plans, preparing production scripts, and crafting complex FFmpeg commands.</p>
+            <p>Whether you're a YouTuber, filmmaker, or social media creator, this toolkit bridges the gap between raw footage and a polished final export.</p>
+        </section>
+
+        <section id="installation">
+            <h2>Installation</h2>
+            <p>Get started by integrating the toolkit into your Claude Code environment in a few simple steps.</p>
+            
+            <div class="step-grid">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h3>Clone the Repository</h3>
+                    <p>Clone the toolkit to your local machine to access the skill files.</p>
+                    <div class="code-container">
+                        <pre id="clone-cmd">git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git</pre>
+                        <button class="copy-btn" onclick="copyText('clone-cmd')">Copy</button>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h3>Copy Skill Folder</h3>
+                    <p>Place the toolkit folder into your designated Claude Code skills directory. This allows Claude to discover the new tools.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h3>Reload Environment</h3>
+                    <p>Restart your Claude Code session or reload the environment to register the new toolkit.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">4</span>
+                    <h3>Verify Installation</h3>
+                    <p>Confirm the skill is active by asking Claude a direct question:</p>
+                    <div class="code-container">
+                        <pre id="verify-prompt">Can you use the video editing toolkit skill?</pre>
+                        <button class="copy-btn" onclick="copyText('verify-prompt')">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="manual">
+            <h2>Manual Installation from ZIP</h2>
+            <p>If you prefer not to use Git, you can install the toolkit manually using a ZIP archive.</p>
+            <ul style="list-style: disc; margin-left: 2rem; color: var(--text-muted); margin-bottom: 2rem;">
+                <li>Download the latest release ZIP from the GitHub repository.</li>
+                <li>Extract the contents to a folder on your computer.</li>
+                <li>Copy the extracted folder into your <strong>Claude Code skills directory</strong>.</li>
+                <li>Restart Claude Code to finish the setup.</li>
+            </ul>
+        </section>
+
+        <section id="usage">
+            <h2>How to Use</h2>
+            <p>Once installed, you can interact with the toolkit using natural language. Try these example prompts to see the toolkit in action:</p>
+            
+            <div class="prompts-list">
+                <div class="prompt-item">"Use the video editing toolkit to create an editing plan for my YouTube video."</div>
+                <div class="prompt-item">"Analyze this video project folder and suggest an editing workflow."</div>
+                <div class="prompt-item">"Generate FFmpeg commands to trim, merge, and compress these clips."</div>
+                <div class="prompt-item">"Create a shot list and editing timeline from this script."</div>
+                <div class="prompt-item">"Help me organize my raw footage, audio, thumbnails, and exports."</div>
+            </div>
+        </section>
+
+        <section id="structure">
+            <h2>Recommended Folder Structure</h2>
+            <p>For the best experience, we recommend organizing your video projects using the following structure. This helps Claude identify and process your assets efficiently.</p>
+            
+            <div class="code-container">
+<pre>
+project/
+├── raw-footage/   # Original unedited video files
+├── audio/         # Voiceovers and recordings
+├── music/         # Background tracks and sound effects
+├── graphics/      # Overlays, logos, and transitions
+├── thumbnails/    # Design assets for video covers
+├── exports/       # Final rendered video files
+├── scripts/       # Production scripts and teleprompter files
+└── notes/         # Creative briefs and editing plans
+</pre>
+            </div>
+        </section>
+
+        <section id="workflow">
+            <h2>Example Workflow</h2>
+            <p>Follow this streamlined process to go from raw assets to a final video with Claude's help:</p>
+            <div class="step-grid">
+                <div class="step-card">
+                    <h3>1. Asset Preparation</h3>
+                    <p>Place your video files in <code>raw-footage/</code> and your audio/music in their respective folders.</p>
+                </div>
+                <div class="step-card">
+                    <h3>2. Project Inspection</h3>
+                    <p>Ask Claude to inspect the project directory. Claude will identify all available assets and their formats.</p>
+                </div>
+                <div class="step-card">
+                    <h3>3. Creative Planning</h3>
+                    <p>Ask Claude to create an editing plan or script based on the notes in your project folder.</p>
+                </div>
+                <div class="step-card">
+                    <h3>4. Technical Execution</h3>
+                    <p>Request Claude to generate FFmpeg commands for specific tasks like trimming, syncing, or color correction.</p>
+                </div>
+                <div class="step-card">
+                    <h3>5. Final Export</h3>
+                    <p>Render your video and move the final version to the <code>exports/</code> folder for distribution.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>Troubleshooting</h2>
+            <div class="step-grid">
+                <div class="step-card">
+                    <strong>Skill not detected</strong>
+                    <p>Ensure the folder is in the correct skills directory and restart Claude Code completely.</p>
+                </div>
+                <div class="step-card">
+                    <strong>Folder not found</strong>
+                    <p>Double-check the relative paths you are providing to Claude. Use <code>ls</code> to verify your current location.</p>
+                </div>
+                <div class="step-card">
+                    <strong>Commands not working</strong>
+                    <p>Verify that <strong>FFmpeg</strong> is installed and available in your system's PATH. Type <code>ffmpeg -version</code> in your terminal to check.</p>
+                </div>
+                <div class="step-card">
+                    <strong>Large File Issues</strong>
+                    <p>Keep raw video files out of Git repositories to avoid sync issues. Use <code>.gitignore</code> for your footage folders.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>FAQ</h2>
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <div>
+                    <h3 style="margin-top: 0;">Is this compatible with all OS?</h3>
+                    <p>Yes, as long as you can run Claude Code and FFmpeg, this toolkit will work on Windows, macOS, and Linux.</p>
+                </div>
+                <div>
+                    <h3 style="margin-top: 0;">Does it support 4K video?</h3>
+                    <p>Absolutely. The toolkit manages the logic and commands; your hardware and FFmpeg handle the actual rendering of any resolution.</p>
+                </div>
+                <div>
+                    <h3 style="margin-top: 0;">Can I add my own tools?</h3>
+                    <p>Yes, the toolkit is modular. You can add new scripts to the folder and Claude will be able to utilize them once reloaded.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="video-note">
+            <h2>Important: Large Video Files</h2>
+            <p>GitHub is not designed for storing large binary files like high-resolution video footage. To maintain a fast and clean repository:</p>
+            <ul style="list-style: disc; margin-left: 2rem; color: var(--text-muted);">
+                <li>Use cloud storage (Google Drive, Dropbox) for raw footage.</li>
+                <li>Link to these external assets in your project <code>README.md</code> or <code>notes/</code>.</li>
+                <li>Only keep code, scripts, and small asset samples in the repository.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Made for Claude Code video editing workflows. &copy; 2026</p>
+        </footer>
+    </main>
+
+    <script>
+        function copyText(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                btn.style.background = '#10b981';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+
+        // Active link highlighting
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
